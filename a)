@@ -1,0 +1,76 @@
+a)crisis economica en Bolivia
+Clase Gobierno
+    Atributos:
+        presupuesto
+        deudaExterna
+        subsidios
+
+    Método controlarInflacion()
+        Escribir "Ejecutando medidas para controlar la inflación..."
+    Fin Método
+
+    Método recaudarImpuestos()
+        Escribir "Recaudando impuestos de ciudadanos y empresas..."
+    Fin Método
+
+    Método emitirBonos()
+        Escribir "Gobierno emitiendo bonos para captar inversión..."
+    Fin Método
+Fin Clase
+
+Clase Empresa
+    Atributos:
+        nombre
+        empleados
+        ingresos
+
+    Método pagarImpuestos()
+        Escribir nombre, " pagando impuestos..."
+    Fin Método
+
+    Método despedir()
+        Escribir nombre, " reduciendo personal por crisis..."
+    Fin Método
+
+    Método exportar()
+        Escribir nombre, " exportando productos al extranjero..."
+    Fin Método
+Fin Clase
+
+Clase Ciudadano
+    Atributos:
+        nombre
+        ingresos
+        gastos
+
+    Método trabajar()
+        Escribir nombre, " está trabajando para generar ingresos..."
+    Fin Método
+
+    Método comprar()
+        Escribir nombre, " realizando compras básicas..."
+    Fin Método
+
+    Método ahorrar()
+        Escribir nombre, " intenta ahorrar pese a la crisis..."
+    Fin Método
+Fin Clase
+
+Clase Banco
+    Atributos:
+        nombre
+        tasaInteres
+        prestamos
+
+    Método otorgarPrestamo()
+        Escribir nombre, " evaluando solicitud de préstamo..."
+    Fin Método
+
+    Método subirInteres()
+        Escribir nombre, " aumentando tasa de interés..."
+    Fin Método
+
+    Método ahorrar()
+        Escribir nombre, " promoviendo cuentas de ahorro..."
+    Fin Método
+Fin Clase
