@@ -1,0 +1,44 @@
+2.
+Clase Cuadrado
+    Atributo:
+        lado
+
+    Método LeerDatos()
+        Escribir "Ingrese el lado del cuadrado:"
+        Leer lado
+    Fin Método
+
+    Método MostrarDatos()
+        Escribir "Lado:", lado
+    Fin Método
+
+    Método CalcularArea()
+        Retornar lado * lado
+    Fin Método
+
+    Método CalcularPerimetro()
+        Retornar 4 * lado
+    Fin Método
+
+    Método ModificarLado()
+        Escribir "Ingrese el nuevo valor del lado:"
+        Leer lado
+        area ← CalcularArea()
+        perimetro ← CalcularPerimetro()
+        Escribir "Nuevo área:", area
+        Escribir "Nuevo perímetro:", perimetro
+    Fin Método
+Fin Clase
+
+// Algoritmo Principal
+Algoritmo Principal
+    Definir c Como Cuadrado
+    c ← Nuevo Cuadrado
+
+    c.LeerDatos()
+    c.MostrarDatos()
+    Escribir "Área:", c.CalcularArea()
+    Escribir "Perímetro:", c.CalcularPerimetro()
+    c.ModificarLado()
+    c.MostrarDatos()
+FinAlgoritmo
