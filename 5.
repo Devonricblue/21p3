@@ -1,0 +1,122 @@
+5)
+Clase Movil
+    Atributos:
+        marca
+        precio
+        modelo
+        memoriaRam
+        almacenamiento
+        codigo[7]
+
+    Constructor() // Por defecto
+        marca ← ""
+        precio ← 0
+        modelo ← ""
+        memoriaRam ← 0
+        almacenamiento ← 0
+        Para i ← 0 Hasta 6 Hacer
+            codigo[i] ← 0
+        Fin Para
+    Fin Constructor
+
+    Constructor(mar, pre, mod, ram, alm) // Con parámetros
+        marca ← mar
+        precio ← pre
+        modelo ← mod
+        memoriaRam ← ram
+        almacenamiento ← alm
+        Para i ← 0 Hasta 6 Hacer
+            codigo[i] ← 0
+        Fin Para
+    Fin Constructor
+
+    Método SetMarca(m)
+        marca ← m
+    Fin Método
+
+    Método GetMarca()
+        Retornar marca
+    Fin Método
+
+    Método SetPrecio(p)
+        precio ← p
+    Fin Método
+
+    Método GetPrecio()
+        Retornar precio
+    Fin Método
+
+    Método SetModelo(mod)
+        modelo ← mod
+    Fin Método
+
+    Método GetModelo()
+        Retornar modelo
+    Fin Método
+
+    Método SetMemoriaRam(r)
+        memoriaRam ← r
+    Fin Método
+
+    Método GetMemoriaRam()
+        Retornar memoriaRam
+    Fin Método
+
+    Método SetAlmacenamiento(a)
+        almacenamiento ← a
+    Fin Método
+
+    Método GetAlmacenamiento()
+        Retornar almacenamiento
+    Fin Método
+
+    Método IngresarCodigo()
+        Escribir "Ingrese los 7 dígitos del código:"
+        Para i ← 0 Hasta 6 Hacer
+            Leer codigo[i]
+        Fin Para
+    Fin Método
+
+    Método InstalarAppBancaMovil()
+        Si almacenamiento >= 60 Entonces
+            almacenamiento ← almacenamiento - 60
+            Escribir "Aplicación 'Banca Móvil' instalada correctamente."
+            Escribir "Almacenamiento restante:", almacenamiento, " MB"
+        Sino
+            Escribir "No hay suficiente espacio para instalar la aplicación."
+        Fin Si
+    Fin Método
+
+    Método MostrarDatos()
+        Escribir "Marca:", marca
+        Escribir "Modelo:", modelo
+        Escribir "RAM:", memoriaRam, " GB"
+        Escribir "Almacenamiento:", almacenamiento, " MB"
+        Escribir "Código:"
+        Para i ← 0 Hasta 6 Hacer
+            Escribir Sin Saltar codigo[i], " "
+        Fin Para
+        Escribir ""
+    Fin Método
+Fin Clase
+//Main
+
+    Definir m1, m2 Como Movil
+
+    // Objeto 1 usando constructor por defecto
+    m1 ← Nuevo Movil()
+    m1.SetMarca("Samsung")
+    m1.SetModelo("A52")
+    m1.SetPrecio(2000)
+    m1.SetMemoriaRam(4)
+    m1.SetAlmacenamiento(128)
+    m1.IngresarCodigo()
+    m1.MostrarDatos()
+    m1.InstalarAppBancaMovil()
+
+    // Objeto 2 usando constructor con parámetros
+    m2 ← Nuevo Movil("Apple", 4000, "iPhone 14", 6, 50)
+    m2.IngresarCodigo()
+    m2.MostrarDatos()
+    m2.InstalarAppBancaMovil()
+FinAlgoritmo
