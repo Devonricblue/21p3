@@ -1,0 +1,125 @@
+4.
+Clase Celular
+    Atributos:
+        marca
+        modelo
+        sistemaOperativo
+        precio
+        numero
+
+    Constructor() // Constructor por defecto
+        marca ← ""
+        modelo ← ""
+        sistemaOperativo ← ""
+        precio ← 0
+        numero ← ""
+    Fin Constructor
+
+    Constructor(m, mo, so) // Constructor con 3 parámetros
+        marca ← m
+        modelo ← mo
+        sistemaOperativo ← so
+        precio ← 0
+        numero ← ""
+    Fin Constructor
+
+    Constructor(m, mo, so, p, n) // Constructor completo
+        marca ← m
+        modelo ← mo
+        sistemaOperativo ← so
+        precio ← p
+        numero ← n
+    Fin Constructor
+
+    Método GetMarca()
+        Retornar marca
+    Fin Método
+
+    Método SetMarca(m)
+        marca ← m
+    Fin Método
+
+    Método GetModelo()
+        Retornar modelo
+    Fin Método
+
+    Método SetModelo(mo)
+        modelo ← mo
+    Fin Método
+
+    Método GetSistemaOperativo()
+        Retornar sistemaOperativo
+    Fin Método
+
+    Método SetSistemaOperativo(so)
+        sistemaOperativo ← so
+    Fin Método
+
+    Método GetPrecio()
+        Retornar precio
+    Fin Método
+
+    Método SetPrecio(p)
+        precio ← p
+    Fin Método
+
+    Método GetNumero()
+        Retornar numero
+    Fin Método
+
+    Método SetNumero(n)
+        numero ← n
+    Fin Método
+
+    Método CalcularCostoLlamada(minutos)
+        costo ← minutos * 0.5
+        Retornar costo
+    Fin Método
+
+    Método CompararMarca(otroCelular)
+        Si marca = otroCelular.GetMarca() Entonces
+            Escribir "Ambos celulares son de la misma marca."
+        Sino
+            Escribir "Las marcas son diferentes."
+        Fin Si
+    Fin Método
+
+    Método MostrarSiEsIOS()
+        Si sistemaOperativo = "iOS" Entonces
+            Escribir "Celular iOS detectado: ", marca, " ", modelo
+        Fin Si
+    Fin Método
+Fin Clase
+// constructores
+
+  // Objeto 1 con constructor por defecto
+    Definir c1 Como Celular
+    c1 ← Nuevo Celular()
+    c1.SetMarca("Samsung")
+    c1.SetModelo("Galaxy A20")
+    c1.SetSistemaOperativo("Android")
+    c1.SetPrecio(1000)
+    c1.SetNumero("71234567")
+
+    // Objeto 2 con constructor de 3 parámetros
+    Definir c2 Como Celular
+    c2 ← Nuevo Celular("Apple", "iPhone 13", "iOS")
+    c2.SetPrecio(3000)
+    c2.SetNumero("70111222")
+
+    // Objeto 3 con constructor completo
+    Definir c3 Como Celular
+    c3 ← Nuevo Celular("Xiaomi", "Redmi Note 11", "Android", 1500, "78945612")
+
+    // Calcular costo de llamada
+    costo ← c1.CalcularCostoLlamada(10)
+    Escribir "Costo de llamada (10 minutos):", costo
+
+    // Comparar marcas
+    c1.CompararMarca(c2)
+
+    // Mostrar celulares con iOS
+    c1.MostrarSiEsIOS()
+    c2.MostrarSiEsIOS()
+    c3.MostrarSiEsIOS()
+FinAlgoritmo
