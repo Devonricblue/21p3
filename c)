@@ -1,0 +1,77 @@
+//c)
+Clase Usuario
+    Atributos:
+        nombre
+        id
+        seguidores
+
+    Método subirVideo()
+        Escribir nombre, " ha subido un nuevo video."
+    Fin Método
+
+    Método seguir()
+        Escribir nombre, " ha seguido a otro usuario."
+    Fin Método
+
+    Método comentar()
+        Escribir nombre, " ha comentado en un video."
+    Fin Método
+Fin Clase
+
+Clase Video
+    Atributos:
+        titulo
+        duracion
+        likes
+
+    Método reproducir()
+        Escribir "Reproduciendo video: ", titulo
+    Fin Método
+
+    Método darLike()
+        likes ← likes + 1
+        Escribir "Se dio like al video ", titulo
+    Fin Método
+
+    Método compartir()
+        Escribir "Compartiendo video: ", titulo
+    Fin Método
+Fin Clase
+
+Clase Comentario
+    Atributos:
+        contenido
+        usuario
+        fecha
+
+    Método editar()
+        Escribir "Editando comentario de ", usuario
+    Fin Método
+
+    Método borrar()
+        Escribir "Comentario eliminado"
+    Fin Método
+
+    Método responder()
+        Escribir "Respondiendo comentario de ", usuario
+    Fin Método
+Fin Clase
+
+Clase Algoritmo
+    Atributos:
+        datosUsuario
+        historial
+        preferencias
+
+    Método filtrarContenido()
+        Escribir "Filtrando contenido según preferencias..."
+    Fin Método
+
+    Método recomendar()
+        Escribir "Mostrando contenido recomendado..."
+    Fin Método
+
+    Método actualizar()
+        Escribir "Actualizando el algoritmo con nuevos datos..."
+    Fin Método
+Fin Clase
