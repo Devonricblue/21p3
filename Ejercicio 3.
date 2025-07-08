@@ -1,0 +1,69 @@
+3)
+Clase Perro
+    Atributos:
+        nombre
+        raza
+        edad
+
+    Constructor(nombreIni, razaIni, edadIni)
+        nombre ← nombreIni
+        raza ← razaIni
+        edad ← edadIni
+    Fin Constructor
+
+    Método GetNombre()
+        Retornar nombre
+    Fin Método
+
+    Método SetNombre(n)
+        nombre ← n
+    Fin Método
+
+    Método GetRaza()
+        Retornar raza
+    Fin Método
+
+    Método SetRaza(r)
+        raza ← r
+    Fin Método
+
+    Método GetEdad()
+        Retornar edad
+    Fin Método
+
+    Método SetEdad(e)
+        edad ← e
+    Fin Método
+
+    Método MostrarDatos()
+        Escribir "Nombre:", nombre
+        Escribir "Raza:", raza
+        Escribir "Edad:", edad
+    Fin Método
+
+    Método Ladrar()
+        Escribir "¡Guau guau!"
+    Fin Método
+
+    Método Comer()
+        Escribir nombre, " está comiendo."
+    Fin Método
+
+    Método EsCachorro()
+        Si edad <= 2 Entonces
+            Escribir nombre, " es un cachorro."
+        Sino
+            Escribir nombre, " no es un cachorro."
+        Fin Si
+    Fin Método
+Fin Clase
+
+// Algoritmo Principal
+Algoritmo Principal
+    Definir miPerro Como Perro
+    miPerro ← Nuevo Perro("Firulais", "Labrador", 1)
+    miPerro.MostrarDatos()
+    miPerro.Ladrar()
+    miPerro.Comer()
+    miPerro.EsCachorro()
+FinAlgoritmo
